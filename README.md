@@ -6,8 +6,10 @@ Work in Progress 12/24——
 
 Colors Used:
 
-Cornflower Blue: #6495ED
-White
+  Cornflower Blue: #6495ED
+  White
+
+
 
 Fonts Used: 
 
