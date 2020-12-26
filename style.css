@@ -4,99 +4,83 @@
     box-sizing: border-box;
 }
 
+
+/* the navigation bar */
 nav{
+    min-height: 8vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    min-height: 8vh;
-    background-color: #6699cc;
-    font-family: 'Raleway', sans-serif;
 }
 
-.logo{
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 20px;
-}
-
+/* links in the navigation bar */
 .nav-links{
     display: flex;
     justify-content: space-around;
+    list-style-type: none;
     width: 50%;
-}
-
-.nav-links li{
-    list-style: none;
-}
-
-.nav-links li a{
     color: white;
-    text-decoration: none;
+    size: 14px;
+}
+
+
+/* Sets the background to zilker, black background in case the image is unavalible */
+body{
+    background-image: url("zilker-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    text-align: center;
+}
+
+.logo{
     letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
-    display: block;
-}
-.nav-links li:hover{
-    background-color: "#F0F8FF";
-}
-.bridge div{
-    width: 25px;
-    height: 2px;
-    background-color: white;
-    margin: 5px;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(139, 113, 201);
+    padding-top: 10vh;
 }
 
-.bridge{
-    display: none;
-    cursor: pointer;
+.logo h1{
+    font-size: 50px;
 }
 
-/* handles support for the touch bar's screen minimization */
-@media screen and (max-width: 1024px){
+.logo p2{
+    font-size: 22px;
+    color: rgb(139, 113, 201);
+}
+
+.logo p3{
+    color: white;
+    font-size: 22px;
+}
+
+.socials li{
+    list-style: none;
+    margin: 10px 30px;
+    display: inline-flex;
+    font-size: 20px;
+    justify-content: space-around;
+    color: white;
+    padding-block-start: 20px;
+}
+
+.socials li a:hover{
+    color:white;
+}
+
+
+@media only screen and (max-width: 768px){
     .nav-links{
         width: 60%;
     }
-}
 
-/* handles mobile support */
-@media screen and (max-width: 768px){
     body{
-        overflow-x: hidden;
+        background-size: cover;
     }
+}
+
+@media only screen and (max-width: 1024px){
     .nav-links{
-        position: absolute;
-        right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background: #6699cc;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-    }
-    .nav-links li{
-        opacity: 0;
-    }
-
-    .bridge{
-        display: block;
-    }
-}
-
-.nav-active{
-    transform: translateX(0%);
-}
-
-@keyframes navLinkFade{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to{
-        opacity: 1;
-        transform: translateX(0px);
+        width: 60%;
     }
 }
